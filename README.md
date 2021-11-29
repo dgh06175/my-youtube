@@ -11,5 +11,8 @@ My 유튜브는 유튜브 채널 목록을 관리하고 해당 채널의 동영�
 ## 🖥 예시 영상
 [![My Youtube](https://img.youtube.com/vi/UMtYgqvdzfk/0.jpg)](https://youtu.be/UMtYgqvdzfk)
 
-#### ❗ 유의 사항
-프로그램 실행을 위해, lib/utilities/keys.dart 에 const String API_KEY = '본인의 유튜브 API 키'; 로 API 키 값을 저장 해줘야 한다.
+## ❗ 실행 방법
+#### lib/utilities/keys.dart 파일을 생성하고, 다음과 같은 코드를 입력해 줘야 합니다.
+```groovy
+const String API_KEY = '본인의 유튜브 API 키';
+```
