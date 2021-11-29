@@ -4,6 +4,7 @@ import 'package:my_youtube/models/video_model.dart';
 import 'package:my_youtube/screens/video_screen.dart';
 import 'package:my_youtube/services/api_service.dart';
 
+// HomeScreen 은 검색 화면 또는 메인 화면에서 채널 카드를 눌렀을때 나오는 페이지이다. 채널 정보와 동영상 목록들이 화면에 표시된다.
 class HomeScreen extends StatefulWidget {
   HomeScreen({@required this.id});
   final String id;

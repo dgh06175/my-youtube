@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:my_youtube/models/video_model.dart';
 
+// home_screen 에서 비디오를 누르면 나오는 비디오 재생 스크린이다.
 class VideoScreen extends StatefulWidget {
   final Video myVideo;
   VideoScreen({this.myVideo});

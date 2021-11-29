@@ -1,3 +1,5 @@
+// video_model.dart 는 비디오 재생 페이지에서 사용할 클래스들을 작성한 파일이다.
+
 class Video {
   final String id;
   final String title;

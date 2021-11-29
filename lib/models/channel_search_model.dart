@@ -1,4 +1,5 @@
-// https://www.googleapis.com/youtube/v3/search?key=AIzaSyA7kLmkh6-u6-boHBLPHBZzIBxeqvvDUD8&type=channel&maxResults=5&q=%EB%B9%A0%EB%8B%88%EB%B3%B4%ED%8B%80
+// channel_search_model.dart 는 채널 검색 페이지에서 사용할 클래스들을 작성한 파일이다.
+
 class SearchedChannelStatus {
   final String channelId;
   final String title;
@@ -17,20 +18,3 @@ class SearchedChannelStatus {
     );
   }
 }
-//
-// class SearchedChannelInfo {
-//   final String title;
-//   final String profilePictureUrl;
-//
-//   SearchedChannelInfo({
-//     this.title,
-//     this.profilePictureUrl,
-//   });
-//
-//   factory SearchedChannelInfo.fromMap(Map<String, dynamic> map) {
-//     return SearchedChannelInfo(
-//       title: map['snippet']['title'],
-//       profilePictureUrl: map['snippet']['thumbnails']['default']['url'],
-//     );
-//   }
-// }

@@ -4,6 +4,7 @@ import 'package:my_youtube/models/channel_search_model.dart';
 import 'package:my_youtube/services/api_service.dart';
 import 'package:my_youtube/screens/home_screen.dart';
 
+// ChannelSearchScreen 은 메인 페이지에서 채널 검색 버튼을 누르면 나오는 스크린이다.
 class ChannelSearchScreen extends StatefulWidget {
   ChannelSearchScreen({@required this.addIdInList});
   final Function addIdInList;
@@ -84,6 +85,46 @@ class _ChannelSearchScreenState extends State<ChannelSearchScreen> {
   }
 }
 
+// 텍스트를 입력하기 전 또는 X를 눌러서 텍스트를 지웠을때 표시할 화면
+displayNoSearchResultScreen() {
+  return Expanded(
+    child: Container(
+      color: Colors.grey[900],
+      child: Column(
+        children: [
+          SizedBox(height: 100.0),
+          Icon(Icons.add_to_queue, color: Colors.grey, size: 150),
+          Text(
+            '구독 채널 추가',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.grey, fontSize: 40),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+// 텍스트를 입력하면 표시할 화면
+displayUsersFoundScreen(
+    String inputtedText, Function addIdInList, String inputText) {
+  return Expanded(
+    child: Container(
+      color: Colors.grey[900],
+      child: ListView.builder(
+        itemCount: 1,
+        itemBuilder: (BuildContext context, int index) {
+          return SearchedCard(
+              text: inputtedText,
+              addIdInList: addIdInList,
+              inputText: inputText);
+        },
+      ),
+    ),
+  );
+}
+
+// 채널의 간략한 정보를 보여줄 카드 위젯
 class SearchedCard extends StatefulWidget {
   const SearchedCard(
       {@required this.text,
@@ -212,41 +253,4 @@ class _SearchedChannelCardListTileState
       ),
     );
   }
-}
-
-displayNoSearchResultScreen() {
-  return Expanded(
-    child: Container(
-      color: Colors.grey[900],
-      child: Column(
-        children: [
-          SizedBox(height: 100.0),
-          Icon(Icons.add_to_queue, color: Colors.grey, size: 150),
-          Text(
-            '구독 채널 추가',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey, fontSize: 40),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
-displayUsersFoundScreen(
-    String inputtedText, Function addIdInList, String inputText) {
-  return Expanded(
-    child: Container(
-      color: Colors.grey[900],
-      child: ListView.builder(
-        itemCount: 1,
-        itemBuilder: (BuildContext context, int index) {
-          return SearchedCard(
-              text: inputtedText,
-              addIdInList: addIdInList,
-              inputText: inputText);
-        },
-      ),
-    ),
-  );
 }

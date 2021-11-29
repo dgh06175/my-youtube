@@ -8,8 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 bool isSetting = false;
 List<String> idLists = [];
 
-List<String> isCheckedList = [];
-
+// MainScreen 은 어플을 실행하면 나오는 구독 목록과 검색 버튼 등이 있는 스크린이다.
 class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -22,7 +21,8 @@ class _MainScreenState extends State<MainScreen> {
     _loadCounter();
   }
 
-  //시작할 떄 counter 값을 불러온다.
+  // 어플을 껐다 켜도 구독 목록을 유지하기 위해 SharedPreferences 를 사용한다.
+  // 시작할 떄 counter 값을 불러온다. 이전에 저장했던 idList 를 불러온다.
   _loadCounter() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -145,6 +145,8 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
+
+// 구독 목록을 ListView 로 관리할 위젯이다.
 class SubscribeCardListview extends StatefulWidget {
   SubscribeCardListview({@required this.myFlex, @required this.removeIdInList});
   final int myFlex;
@@ -226,6 +228,7 @@ class _SubscribeCardListviewState extends State<SubscribeCardListview> {
   }
 }
 
+// 구독 목록 안에 들어갈 카드 위젯이다.
 class SubscribeCard extends StatefulWidget {
   SubscribeCard({@required this.id});
   final String id;
@@ -300,7 +303,6 @@ class ChannelCardListTile extends StatefulWidget {
 
 class _ChannelCardListTileState extends State<ChannelCardListTile> {
   _ChannelCardListTileState({@required this.id});
-  bool isChecked = false;
   final String id;
 
   @override
