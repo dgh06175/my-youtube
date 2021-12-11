@@ -25,4 +25,4 @@ https://console.cloud.google.com/ 에 접속한다.
 4. 사용자 인증 정보 만들기 버튼을 클릭한다.
 5. API 선택에서 youtube data API v3 를 선택하고 공개 데이터를 선택하고 다음 버튼을 누른다.
 6. 발급된 API 키를 복사하고 완료 버튼을 누른다.
-7. API 키를 프로젝트의 lib/utilities/keys.dart 파일에 적용한다.
+7. API 키를 프로젝트의 lib/utilities/keys.dart 파일에 위의 예시과 같게 적용한다.
