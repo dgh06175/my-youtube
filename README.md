@@ -20,9 +20,9 @@ const String API_KEY = '본인의 유튜브 API 키';
 ### 유튜브 API 키 발급 받는 방법
 https://console.cloud.google.com/ 에 접속한다.
 1. 새로운 프로젝트를 만든다
-2. 만든 프로젝트를 선택하고, Marketplace 메뉴를 클릭한다.
+2. 만든 프로젝트를 선택하고, 대시보드 상단의 검색창을 클릭한다.
 3. youtube data API v3 를 검색해서 누르고, 사용 버튼을 클릭한다.
 4. 사용자 인증 정보 만들기 버튼을 클릭한다.
-5. API 선택에서 youtube data API v3 를 선택하고 공개 데이터를 선택하고 다음 버튼을 누른다.
+5. API 선택에서는 youtube data API v3 를, 엑세스 할 데이터는 공개 데이터를 선택하고 다음 버튼을 누른다.
 6. 발급된 API 키를 복사하고 완료 버튼을 누른다.
 7. API 키를 프로젝트의 lib/utilities/keys.dart 파일에 위의 예시과 같게 적용한다.
