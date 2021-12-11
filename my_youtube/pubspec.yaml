@@ -1,0 +1,27 @@
+name: my_youtube
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.11.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: 0.5.12
+  cupertino_icons: ^1.0.3
+
+  http: ^0.13.3
+  youtube_player_flutter: ^6.0.3+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: lib/fonts/Roboto-Regular.ttf
