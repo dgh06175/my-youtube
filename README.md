@@ -17,6 +17,8 @@ lib/utilities 경로에 keys.dart 파일을 생성하고, 다음과 같은 코�
 ```groovy
 const String API_KEY = '본인의 유튜브 API 키';
 ```
+위 작업을 완료한 후, Android Studio를 이용해서 실행해야 합니다.
+
 ### 유튜브 API 키 발급 받는 방법
 https://console.cloud.google.com/ 에 접속한다.
 1. 새로운 프로젝트를 만든다
